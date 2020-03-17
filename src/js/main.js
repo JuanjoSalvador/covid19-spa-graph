@@ -39,11 +39,12 @@ function makeChartNational(stadistics) {
             datasets: [dataset_confirmed, dataset_deaths, dataset_healed]
         },
         options: {
+            responsive: true,
             legend: {
                 display: true,
                 position: 'top',
                 labels: {
-                    boxWidth: 30,
+                    boxWidth: 15,
                     fontColor: 'black'
                 }
             },
@@ -61,7 +62,7 @@ function makeChartNational(stadistics) {
                         mode: 'xy'
                     },
                     zoom: {
-                        enabled: true,
+                        enabled: false,
                         mode: 'xy',
                     }
                 }
