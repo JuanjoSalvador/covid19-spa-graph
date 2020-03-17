@@ -1,0 +1,26 @@
+{
+  "name": "covid19-spa-graph",
+  "version": "1.0.0",
+  "description": "Evolución del COVID-19 en España en forma de gráficos",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanjoSalvador/covid19-spa-graph.git"
+  },
+  "author": "Juanjo Salvador",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JuanjoSalvador/covid19-spa-graph/issues"
+  },
+  "homepage": "https://github.com/JuanjoSalvador/covid19-spa-graph#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-minify": "^3.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
