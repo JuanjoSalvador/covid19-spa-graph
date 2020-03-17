@@ -3,10 +3,6 @@ let national = document.getElementById("national");
 d3.csv('https://raw.githubusercontent.com/datadista/datasets/master/COVID%2019/nacional_covid19.csv')
   .then(makeChartNational);
 
-d3.csv('https://raw.githubusercontent.com/datadista/datasets/master/COVID%2019/nacional_covid19.csv')
-  .then(makeChartProvinces);
-
-
 function makeChartNational(stadistics) {
     let dataLabels = stadistics.map(function(d) {
         return d.fecha;
