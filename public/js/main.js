@@ -1,11 +1,17 @@
 let national = document.getElementById("national");
+let autonomic = document.getElementById("autonomic");
 
-d3.csv('https://raw.githubusercontent.com/datadista/datasets/master/COVID%2019/nacional_covid19.csv')
-  .then(makeChartNational);
+let datasets = []
+let stadistics;
+
+
+// Nacional
+d3.csv('https://raw.githubusercontent.com/datadista/datasets/master/COVID%2019/nacional_covid19.csv').then(makeChartNational);
 
 function makeChartNational(stadistics) {
     let dataLabels = stadistics.map(function(d) {
-        return d.fecha;
+        let date = d.fecha.split('-')
+        return date[2] + "/" + date[1] + "/" + date[0]
     });
 
     let dataset_confirmed = {
@@ -13,6 +19,14 @@ function makeChartNational(stadistics) {
         data: stadistics.map((d) => d.casos),
         fill: false,
         borderColor: 'lightblue',
+        lineTension: 0
+    };
+
+    let datasets_actives = {
+        label: "Casos activos",
+        data: stadistics.map((d) => d.casos - d.fallecimientos - d.altas),
+        fill: false,
+        borderColor: 'rgba(147,112,219, 0.5)',
         lineTension: 0
     };
 
@@ -32,11 +46,11 @@ function makeChartNational(stadistics) {
         lineTension: 0
     };
 
-    let chart = new Chart(national, {
+    new Chart(national, {
         type: 'line',
         data: {
             labels: dataLabels,
-            datasets: [dataset_confirmed, dataset_deaths, dataset_healed]
+            datasets: [dataset_confirmed, datasets_actives, dataset_deaths, dataset_healed]
         },
         options: {
             responsive: true,
@@ -54,18 +68,6 @@ function makeChartNational(stadistics) {
                         beginAtZero:true
                     }
                 }]
-            },
-            plugins: {
-                zoom: {
-                    pan: {
-                        enabled: false,
-                        mode: 'xy'
-                    },
-                    zoom: {
-                        enabled: false,
-                        mode: 'xy',
-                    }
-                }
             }
         }
     })
