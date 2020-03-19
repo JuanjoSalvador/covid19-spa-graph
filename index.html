@@ -24,77 +24,80 @@
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@0.7.4"></script></script>
+
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
+        <script defer src="src/js/main.js"></script>
     </head>
 
     <body>
-        <section class="hero is-light" id="main">
-            <div class="hero-body">
+        <div id="main">
+            <section class="hero is-light" id="main">
+                <div class="hero-body">
+                    <div class="container main">
+                        <div class="columns">                       
+                            <div class="column">
+                                <h1 class="title is-1">
+                                    📈 Evolución del COVID-19 en España
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="atribution">
                 <div class="container main">
-                    <div class="columns">                       
+                    <div class="columns">
                         <div class="column">
-                            <h1 class="title is-1">Evolución del COVID-19 en España</h1>
+                            <p>
+                                Evolución del COVID-19 (SARS-CoV-2) en España, desde que se detectó el primer caso. Datos suministrados por <a href="https://github.com/datadista/datasets/tree/master/COVID%2019"><strong>Datadista</strong></a>, quienes
+                                elaboran la fuente en base a los informes del <strong>Ministerio de Sanidad</strong> y el <strong>Departamento de Seguridad Nacional</strong>.
+                            </p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-       
-        <section class="section">
-            <div class="container main">
-                <div class="columns">
-                    <div class="column">
-                        <h2 class="title is-2">
-                            <span class="hashtag">#</span> Nacional
-                        </h2>
+            </section>
+        
+            <section class="section">
+                <div class="container main">
+                    <div class="columns">
+                        <div class="column">
+                            <h2 class="title is-2">
+                                <span class="hashtag">#</span> Nacional
+                            </h2>
 
-                        <canvas id="national"></canvas>
+                            <canvas id="national"></canvas>
 
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container main">
-                <div class="columns">
-                    <div class="column">
-                        <h2 class="title is-2">
-                            <span class="hashtag">#</span> Por comunidad autónoma
-                        </h2>
-
-                        <div class="notification is-warning">
-                            <strong>Estamos trabajando en ello...</strong>
                         </div>
-
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="section" id="atribution">
-            <div class="container main">
-                <div class="columns">
-                    <div class="column">
-                        <h2 class="title is-2">
-                            <span class="hashtag">#</span> Fuente
-                        </h2>
-                        <p>
-                            Los datos aquí representados son suministrados por <a href="https://github.com/datadista/datasets/tree/master/COVID%2019"><strong>Datadista</strong></a> a través de GitHub, quienes
-                            a su vez, obtienen los datos del <strong>Ministerio de Sanidad</strong> y el <strong>Departamento de Seguridad Nacional</strong>.
-                        </p>
+            <section class="section">
+                <div class="container main">
+                    <div class="columns">
+                        <div class="column">
+                            <h2 class="title is-2">
+                                <span class="hashtag">#</span> Por comunidad autónoma
+                            </h2>
+
+                            <div class="notification is-warning">
+                                <strong>Estamos trabajando en ello...</strong>
+                            </div>
+
+                            <canvas id="autonomic"></canvas>
+
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
         <footer class="footer">
             <div class="content has-text-centered">
                 <p>
                     <strong>
-                        Made with <span style="color: #e25555;">&hearts;</span> by <a href="https://jsalvador.me/">Juanjo Salvador</a>
+                        Made with ❤️ by <a href="https://jsalvador.me/">Juanjo Salvador</a>
                     </strong>
                 </p>
                 <p>
@@ -104,5 +107,4 @@
             </div>
         </footer>
     </body>
-    <script src="public/js/main.min.js"></script>
 </html>
