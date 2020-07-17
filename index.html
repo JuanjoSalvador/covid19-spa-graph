@@ -26,7 +26,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.15.0/d3.min.js"></script>
 
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
-        <script defer src="src/js/main.js"></script>
+        <script defer src="public/js/main.min.js"></script>
     </head>
 
     <body>
@@ -53,6 +53,10 @@
                                 Evolución del COVID-19 (SARS-CoV-2) en España, desde que se detectó el primer caso. Datos suministrados por <a href="https://github.com/datadista/datasets/tree/master/COVID%2019"><strong>Datadista</strong></a>, quienes
                                 elaboran la fuente en base a los informes del <strong>Ministerio de Sanidad</strong> y el <strong>Departamento de Seguridad Nacional</strong>.
                             </p>
+                            <br/>
+                            <p>
+                                Os recuerdo que es obligatorio el <strong>uso de mascarillas en todo momento</strong>, tanto en entornos abiertos como cerrados, e incluso aunque se cumpla la distancia de seguridad de 2 metros.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -66,26 +70,33 @@
                                 <span class="hashtag">#</span> Nacional
                             </h2>
 
-                            <canvas id="national"></canvas>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section">
-                <div class="container main">
-                    <div class="columns">
-                        <div class="column">
-                            <h2 class="title is-2">
-                                <span class="hashtag">#</span> Por comunidad autónoma
-                            </h2>
-
-                            <div class="notification is-warning">
-                                <strong>Estamos trabajando en ello...</strong>
+                            <div class="notification is-info">
+                                Debido a una serie de cambios en la fuente de datos, <strong>no se disponen de datos acerca de las nuevas altas y recuperaciones</strong> desde el <strong>19 de Mayo
+                                de 2020</strong>. Más información en el <a href="https://github.com/datadista/datasets/blob/master/COVID%2019/readme.md">repositorio de Datadista</a>.
                             </div>
 
-                            <canvas id="autonomic"></canvas>
+                            <section>
+                                <div class="container main">
+                                    <h3 class="title is-4 center">Datos actualizados el <span id="last_date" class="data"></span></h3>
+                                    <div class="columns">
+                                        <div class="column"></div>
+                                        <div class="column">
+                                            <h3 class="title is-4">Confirmados: <span id="confirmed" class="data"></span></h3>
+                                        </div>
+                                        <div class="column">
+                                            <h3 class="title is-4">Casos activos: <span id="active" class="data"></span></h3>
+                                        </div>
+                                        <div class="column">
+                                            <h3 class="title is-4">Fallecimientos: <span id="deaths" class="data"></span></h3>
+                                        </div>
+                                        <div class="column"></div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <br/>
+
+                            <canvas id="national"></canvas>
 
                         </div>
                     </div>
@@ -102,6 +113,7 @@
                 </p>
                 <p>
                     <a href="https://github.com/JuanjoSalvador/" class="social-link"><i class="fab fa-github-alt fa-3x"></i></a>
+                    <a href="https://twitter.com/Linuxneitor/" class="social-link"><i class="fab fa-twitter fa-3x"></i></a>
                     <a href="https://hispatodon.club/@jsalvador" rel="me" class="social-link"><i class="fab fa-mastodon fa-3x"></i></a>
                 </p>
             </div>
