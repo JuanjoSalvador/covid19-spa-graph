@@ -44,6 +44,61 @@
                     </div>
                 </div>
             </section>
+        
+            <section class="section">
+                <div class="container main">
+                    <div class="columns">
+                        <div class="column">
+                            <!-- <h2 class="title is-2">
+                                <span class="hashtag">#</span> Nacional
+                            </h2> -->
+
+                            <div class="notification is-info">
+                                Debido a una serie de cambios en la fuente de datos, <strong>no se disponen de datos acerca de las nuevas altas y recuperaciones</strong> desde el <strong>19 de Mayo
+                                de 2020</strong>. Más información en el <a href="https://github.com/datadista/datasets/blob/master/COVID%2019/readme.md">repositorio de Datadista</a>.
+                            </div>
+
+                            <section>
+                                <div class="container main">
+                                    <h3 class="title is-4 center">Datos actualizados el <span id="last_date" class="data"></span></h3>
+                                    <div class="columns">
+                                        <div class="column">
+                                            <div class="level">
+                                                <div class="level-item has-text-centered">
+                                                    <div>
+                                                        <p class="heading">Casos confirmados</p>
+                                                        <p class="title"><span id="confirmed"></span></p>
+                                                    </div>
+                                                </div>
+                        
+                                                <div class="level-item has-text-centered">
+                                                    <div>
+                                                        <p class="heading">Hospitalizados</p>
+                                                        <p class="title"><span id="hospitalized"></span></p>
+                                                    </div>
+                                                </div>
+                        
+                                                <div class="level-item has-text-centered">
+                                                    <div>
+                                                        <p class="heading">Fallecimientos</p>
+                                                        <p class="title"><span id="deaths"></span></p>
+                                                    </div>
+                                                </div>                        
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <br/>
+                            <!--<div class="chart-container" style="position: relative; min-height:50vh">-->
+                                <canvas id="national"></canvas>
+                            <!--</div>-->
+
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <section class="section" id="atribution">
                 <div class="container main">
@@ -55,53 +110,13 @@
                             </p>
                             <br/>
                             <p>
-                                Os recuerdo que es obligatorio el <strong>uso de mascarillas en todo momento</strong>, tanto en entornos abiertos como cerrados, e incluso aunque se cumpla la distancia de seguridad de 2 metros.
+                                Recuerda que es obligatorio el <strong>uso de mascarillas en todo momento</strong>, tanto en entornos abiertos como cerrados, e incluso aunque se cumpla la distancia de seguridad de 2 metros.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
-        
-            <section class="section">
-                <div class="container main">
-                    <div class="columns">
-                        <div class="column">
-                            <h2 class="title is-2">
-                                <span class="hashtag">#</span> Nacional
-                            </h2>
 
-                            <div class="notification is-info">
-                                Debido a una serie de cambios en la fuente de datos, <strong>no se disponen de datos acerca de las nuevas altas y recuperaciones</strong> desde el <strong>19 de Mayo
-                                de 2020</strong>. Más información en el <a href="https://github.com/datadista/datasets/blob/master/COVID%2019/readme.md">repositorio de Datadista</a>.
-                            </div>
-
-                            <section>
-                                <div class="container main">
-                                    <h3 class="title is-4 center">Datos actualizados el <span id="last_date" class="data"></span></h3>
-                                    <div class="columns">
-                                        <div class="column"></div>
-                                        <div class="column">
-                                            <h3 class="title is-4">Confirmados: <span id="confirmed" class="data"></span></h3>
-                                        </div>
-                                        <div class="column">
-                                            <h3 class="title is-4">Casos activos: <span id="active" class="data"></span></h3>
-                                        </div>
-                                        <div class="column">
-                                            <h3 class="title is-4">Fallecimientos: <span id="deaths" class="data"></span></h3>
-                                        </div>
-                                        <div class="column"></div>
-                                    </div>
-                                </div>
-                            </section>
-
-                            <br/>
-
-                            <canvas id="national"></canvas>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
         </div>
 
         <footer class="footer">
